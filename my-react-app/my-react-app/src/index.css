@@ -1,0 +1,271 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;  
+}
+
+
+
+.repo-grid{
+  display:grid;  
+  gap: 20px;
+ width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 20px;
+  
+}
+
+.repo-grid .repo{
+  background-color: lavender;
+  padding: 20%;
+  border-radius: 20%;
+  width: 90%;
+  height: 100%;
+}
+.table-container{
+  text-align: center;
+  width: 800px;
+  margin: 0 auto; 
+}
+h1{
+  padding: 10%;
+  font-size: 55px;
+}
+
+.mainimage-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+#mainimage, #cimage {
+  max-width: none; 
+  width: 50%;
+  height: auto; 
+  border-radius: 50%;     
+  animation: imganimation 10s infinite linear; 
+  animation-play-state: running;
+  animation-duration: 10s; 
+}
+
+
+
+#mainimage:hover{
+  box-shadow: 5px 5px 5px black;
+  
+}
+
+body{
+  background-attachment: fixed;
+  background-image: url(https://images.prismic.io/visithalland2/52142491-e401-4794-9c4c-1cb1c6bca697_Varberg_Kallbadhuset_2019_Varbergskommun_DestinationVarberg_FotografNatalieGreppi_HQ-90.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#mainsec{
+  
+          text-align: center;
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;            
+          border-radius: 8px;
+          box-shadow: 0 0 10 rgba(red, green, blue, alpha);
+          margin-top: 15%;
+  
+}
+
+#cvsec{
+  background-color: lavender;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px auto; 
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 5%;
+}
+
+#loremdiv{
+  background-color: lavender;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 10px auto; 
+  max-width: fit-content;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-top: 5%;
+}
+
+.portfoliocontainer {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+      
+}
+
+.image-containerportfolio {
+  position: relative;
+  width: 100%; 
+  max-width: 100%; 
+  text-align: center;
+}
+
+.image-containerportfolio img {
+  max-width: 100%; 
+  height: auto; 
+}
+
+@media (max-width: 600px) { 
+  .image-containerportfolio {
+      flex: 0 0 50%; 
+  }
+  .image-containerportfolio img {
+      max-width: 100%; 
+      height: auto; 
+  }
+  #cvsec {
+      max-width: 55%; 
+  }
+  #vbgimg{
+      max-width: 100%;
+  }
+}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 999; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); 
+  justify-content: center; 
+  align-items: center; 
+}
+
+
+.modal:target {
+  display: flex;
+}
+
+
+.modal-content {
+  background-color: lavender;
+  padding: 20px;
+  border-radius: 5px;
+  position: relative;
+  max-width: 600px;
+  max-height: 100%;
+  overflow-y: auto; 
+  word-wrap: break-word;
+}
+
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+
+.modal-close:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+
+.contact-container {
+  width: 50%;
+  margin: 50px auto;
+  background-color: lavender;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-title {
+  text-align: center;
+}
+
+.contact-form-group {
+  margin-bottom: 20px;
+}
+
+.contact-label {
+  font-weight: bold;
+}
+
+.contact-input[type="text"],
+.contact-input[type="email"],
+.contact-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-textarea {
+  resize: vertical;
+}
+
+.contact-submit-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-submit-btn:hover {
+  background-color: #45a049;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 80px; 
+  left: 0; 
+  right: 0; 
+  z-index: 999;
+  margin: 0 auto;
+}
+
+.social-icons a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  position: relative;
+  
+}
+
+.github-button, .linkedin-button, .instagram-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0; 
+}
+
